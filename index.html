@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <p id="message" class="top-message"></p>
+
+        <div class="game-box">
+            <h2>Number Guessing Game</h2>
+            <div class="level-select">
+                <label for="level">Choose Difficulty:</label>
+                <select id="level" onchange="setLevel()">
+                    <option value="10">Easy (1-10)</option>
+                    <option value="100" selected>Medium (1-100)</option>
+                    <option value="1000">Hard (1-1000)</option>
+                    <option value="10000">Expert (1-10000)</option>
+                </select>
+            </div>
+
+            <p id="rangeText">Guess a number between <strong>1</strong> and <strong>100</strong></p>
+            <input type="number" id="guessInput" placeholder="Enter your guess">
+            <button onclick="checkGuess()">Guess</button>
+
+            <p id="attempts">Attempts: 0</p>
+            <p id="hintText"></p>
+            <button id="resetBtn" onclick="resetGame()">Restart Game</button>
+            <button id="hintBtn" onclick="showHint()">Show Hint</button>
+        </div>
+
+      
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
